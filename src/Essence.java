@@ -8,6 +8,7 @@ public abstract class Essence {
     Features features;
     boolean hasRace;
     Race race;
+    EssenceType essenceType = new EssenceType();
 
     public Essence(boolean isMortal, boolean canBeTransformed, boolean isConscious, boolean hasAttributes, boolean hasFeatures, boolean hasRace) {
         this.isMortal = isMortal;

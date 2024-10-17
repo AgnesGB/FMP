@@ -5,7 +5,6 @@ public class Attributes {
     private int intelligence;
     private int wisdom;
     private int charisma;
-    private EssenceType essenceType;
 
     public Attributes() {
         strength = 0;
@@ -16,7 +15,7 @@ public class Attributes {
         charisma = 0;
     }
 
-    public void setAtributes(int strength, int dexterity, int constitution, int intelligence,int wisdom,int charisma) {
+    public void setAttributes(int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
         setStrength(strength);
         setDexterity(dexterity);
         setConstitution(constitution);
@@ -24,24 +23,24 @@ public class Attributes {
         setWisdom(wisdom);
         setCharisma(charisma);
 
-        //Limit attributes to 5.
-        if (strength > 5){
-            throw new RuntimeException("Your strength is greater than 5, please, do it again.");
+        //Limit attributes to 7.
+        if (strength > 7){
+            throw new RuntimeException("Your strength is greater than 7, please, do it again.");
         }
-        if (dexterity > 5){
-            throw new RuntimeException("Your dexterity is greater than 5, please, do it again.");
+        if (dexterity > 7){
+            throw new RuntimeException("Your dexterity is greater than 7, please, do it again.");
         }
-        if (constitution > 5){
-            throw new RuntimeException("Your constitution is greater than 5, please, do it again.");
+        if (constitution > 7){
+            throw new RuntimeException("Your constitution is greater than 7, please, do it again.");
         }
-        if (intelligence > 5){
-            throw new RuntimeException("Your intelligence is greater than 5, please, do it again.");
+        if (intelligence > 7){
+            throw new RuntimeException("Your intelligence is greater than 7, please, do it again.");
         }
-        if (wisdom > 5){
-            throw new RuntimeException("Your wisdom is greater than 5, please, do it again.");
+        if (wisdom > 7){
+            throw new RuntimeException("Your wisdom is greater than 7, please, do it again.");
         }
-        if (charisma > 5){
-            throw new RuntimeException("Your charisma is greater than 5, please, do it again.");
+        if (charisma > 7){
+            throw new RuntimeException("Your charisma is greater than 7, please, do it again.");
         }
 
         //Limit attributes to 0.
@@ -70,26 +69,98 @@ public class Attributes {
     }
 
     public void setMortalAttributes(int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
-        setAtributes(strength, dexterity, constitution, intelligence, wisdom, charisma);
+        setAttributes(strength, dexterity, constitution, intelligence, wisdom, charisma);
 
         // Limits sum of attributes to Mortals to 10.
         if (sumAttributes() > 10) {
             throw new RuntimeException("Your attributes exceed 10 points, please try again.");
         }
         if (sumAttributes() < 10) {
-            throw new RuntimeException("your attributes do not reach 10 points, please try again.");
+            throw new RuntimeException("Your attributes do not reach 10 points, please try again.");
+        }
+    }
+    
+    public void setEssenceExperimentAttributes(int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
+        setAttributes(strength, dexterity, constitution, intelligence, wisdom, charisma);
+
+        // Limits sum of attributes to Essence Experiment to 15.
+        if (sumAttributes() > 12) {
+            throw new RuntimeException("Your attributes exceed 12 points, please try again.");
+        }
+        if (sumAttributes() < 12) {
+            throw new RuntimeException("Your attributes do not reach 12 points, please try again.");
         }
     }
 
     public void setServantAttributes(int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
-        setAtributes(strength, dexterity, constitution, intelligence, wisdom, charisma);
+        setAttributes(strength, dexterity, constitution, intelligence, wisdom, charisma);
 
         // Limits sum of attributes to Servant to 15.
         if (sumAttributes() > 15) {
             throw new RuntimeException("Your attributes exceed 15 points, please try again.");
         }
         if (sumAttributes() < 15) {
-            throw new RuntimeException("your attributes do not reach 15 points, please try again.");
+            throw new RuntimeException("Your attributes do not reach 15 points, please try again.");
+        }
+    }
+
+    public void setAscendedServantAttributes(int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
+        setAttributes(strength, dexterity, constitution, intelligence, wisdom, charisma);
+
+        // Limits sum of attributes to Ascended Servant to 18.
+        if (sumAttributes() > 18) {
+            throw new RuntimeException("Your attributes exceed 15 points, please try again.");
+        }
+        if (sumAttributes() < 18) {
+            throw new RuntimeException("Your attributes do not reach 15 points, please try again.");
+        }
+    }
+
+    public void setDemiGodAttributes(int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
+        setAttributes(strength, dexterity, constitution, intelligence, wisdom, charisma);
+
+        // Limits sum of attributes to Demi God to 20.
+        if (sumAttributes() > 20) {
+            throw new RuntimeException("Your attributes exceed 20 points, please try again.");
+        }
+        if (sumAttributes() < 20) {
+            throw new RuntimeException("Your attributes do not reach 20 points, please try again.");
+        }
+    }
+
+    public void setLesserGodAttributes(int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
+        setAttributes(strength, dexterity, constitution, intelligence, wisdom, charisma);
+
+        // Limits sum of attributes to Lesser God to 22.
+        if (sumAttributes() > 22) {
+            throw new RuntimeException("Your attributes exceed 22 points, please try again.");
+        }
+        if (sumAttributes() < 22) {
+            throw new RuntimeException("Your attributes do not reach 22 points, please try again.");
+        }
+    }
+
+    public void setMiddleGodAttributes(int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
+        setAttributes(strength, dexterity, constitution, intelligence, wisdom, charisma);
+
+        // Limits sum of attributes to MiddleGod to 25.
+        if (sumAttributes() > 25) {
+            throw new RuntimeException("Your attributes exceed 25 points, please try again.");
+        }
+        if (sumAttributes() < 25) {
+            throw new RuntimeException("Your attributes do not reach 25 points, please try again.");
+        }
+    }
+
+    public void setGreaterGodAttributes(int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
+        setAttributes(strength, dexterity, constitution, intelligence, wisdom, charisma);
+
+        // Limits sum of attributes to Greater God to 30.
+        if (sumAttributes() > 30) {
+            throw new RuntimeException("Your attributes exceed 30 points, please try again.");
+        }
+        if (sumAttributes() < 30) {
+            throw new RuntimeException("Your attributes do not reach 30 points, please try again.");
         }
     }
 
