@@ -6,7 +6,7 @@ This repository contains a tool for creating essences, allowing for the configur
 
 # Features
 You can create a new essence using the CreateEssence class. Here’s an example of how to use it:
-CreateEssence test = new CreateEssence(...);
+/ CreateEssence test = new CreateEssence(...);
 
 # Parameters
 When instantiating a new essence, you need to pass the following parameters:
@@ -15,7 +15,7 @@ When instantiating a new essence, you need to pass the following parameters:
 - Age: The age of the essence.
 - Magical Affinity: The essence's affinity for magic.
 - Race: Determines the amount of health, mana, and certain effects.
-Additionally, boolean parameters will define the type of essence, based on the EssenceType, which categorizes the essence being created.
+/ Additionally, boolean parameters will define the type of essence, based on the EssenceType, which categorizes the essence being created.
 
 # Types of Essences and Limitations
 - Mortals: can have up to 10 attribute points.
